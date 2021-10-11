@@ -22,8 +22,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	sayHelloWorld("Hello World!")
 
-	var whatToSay string
-	whatToSay = doctor.Intro()
+	whatToSay := doctor.Intro()
 	fmt.Println(whatToSay)
 
 	for {
@@ -54,3 +53,9 @@ func sayHelloWorld(whatToSay string) {
 //A package is a collection of common source code files.
 //Functions, types, variables, and constants defined in one source
 //file are visible to all other source files within the same package
+
+//What We've learned
+//passing params
+//making variables in two different ways
+//every gofile has a package declaration
+//how to make modules, and what they are
