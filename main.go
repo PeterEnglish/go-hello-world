@@ -4,18 +4,27 @@ package main
 //do not name it main.go, it will not build an executable.
 //Convention dictates we call the main package 'main'.
 
-import "fmt"
+import (
+	"fmt"
+	//remember to name folder according to whats in .mod file or face errors!
+	"github.com/PeterEnglish/go-hello-world/doctor"
+)
 
 //Give package access to code contained in fmt package.
 
 func main() {
 	sayHelloWorld("Hello World!")
+
+	var whatToSay string
+	whatToSay = doctor.Intro()
+	fmt.Println(whatToSay)
 }
 
 func sayHelloWorld(whatToSay string) {
 	fmt.Println(whatToSay)
 }
 
+//GO COMMANDS
 //'go run main.go' to run ->Compiles and Executes.
 //'go build main.go' - just compiles a program
 //'go fmt main.go' - formats code in each file in current directory
